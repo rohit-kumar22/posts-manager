@@ -1,17 +1,27 @@
 export const addProductFormMapping = [
   {
-    name: "product_name",
-    label: "Product Name",
+    name: "title",
+    label: "Title",
     type: "text",
   },
   {
-    name: "description",
+    name: "body",
     label: "Description",
     type: "textArea",
   },
   {
-    name: "price",
-    label: "Price",
+    name: "userId",
+    label: "User ID",
+    type: "number",
+  },
+  {
+    name: "tags",
+    label: "Tags (comma-separated)",
+    type: "text",
+  },
+  {
+    name: "reactions",
+    label: "Reactions",
     type: "number",
   },
 ];

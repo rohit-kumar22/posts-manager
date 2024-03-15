@@ -49,7 +49,7 @@ const AddNewProduct = () => {
   };
   return (
     <Box>
-      <Button variant="contained" onClick={() => setIsDrawerOpen(true)}>
+      <Button sx={{margin:"20px"}} variant="contained" onClick={() => setIsDrawerOpen(true)}>
         Add New Product
       </Button>
       <Drawer
