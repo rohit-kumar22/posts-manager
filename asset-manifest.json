@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/posts-manager/static/css/main.e6c13ad2.css",
+    "main.js": "/posts-manager/static/js/main.e4e97f40.js",
+    "index.html": "/posts-manager/index.html",
+    "main.e6c13ad2.css.map": "/posts-manager/static/css/main.e6c13ad2.css.map",
+    "main.e4e97f40.js.map": "/posts-manager/static/js/main.e4e97f40.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.e4e97f40.js"
+  ]
+}
