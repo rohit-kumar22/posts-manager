@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-
-//Mui Import
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
@@ -10,11 +8,7 @@ import TextField from "@mui/material/TextField";
 import Drawer from "@mui/material/Drawer";
 
 import { TextareaAutosize as Textarea } from "@mui/base/TextareaAutosize";
-
-//Assests
 import CloseIcon from "@mui/icons-material/Close";
-
-//Utils
 import { addProductFormMapping } from "../api/utils/utils";
 
 const AddNewProduct = () => {

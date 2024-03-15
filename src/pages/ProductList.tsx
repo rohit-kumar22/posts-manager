@@ -1,13 +1,7 @@
 import React from "react";
-
-//Mui import
 import { Box, Grid, Stack, Typography } from "@mui/material";
-
-//Components
 import ProductCard from "../Components/ProductCard";
 import AddNewProduct from "../Components/AddNewProduct";
-
-//API import
 import { fetchProducts } from "../api/api";
 import { useQuery } from "@tanstack/react-query";
 
