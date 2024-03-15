@@ -5,19 +5,29 @@ import AddNewProduct from "../Components/AddNewProduct";
 import { fetchProducts } from "../api/api";
 import { useQuery } from "@tanstack/react-query";
 
+interface ProductItem {
+  id: number;
+}
 const ProductList = () => {
-  const { data, isLoading } = useQuery({
+  const { data, isLoading, isError, error, refetch } = useQuery({
     queryKey: ["posts"],
     queryFn: fetchProducts,
   });
-  console.log({ data, isLoading });
+
+  if (isError) {
+    return (
+      <Box sx={{ p: 2 }}>
+        <Typography color="error">Error loading products: {error instanceof Error ? error.message : "Unknown error"}</Typography>
+      </Box>
+    );
+  }
 
   return (
     <Grid container>
       <Grid item xs={12}>
         <Stack direction={"row"}>
           <Box sx={{ ml: "auto" }}>
-            <AddNewProduct />
+            <AddNewProduct refetch={refetch} />
           </Box>
         </Stack>
       </Grid>

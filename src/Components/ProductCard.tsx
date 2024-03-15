@@ -42,7 +42,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ cardData }) => {
     <Box 
       sx={{ 
         maxWidth: "300px", 
-        backgroundColor: "#f0e130", 
+        backgroundColor: "smoke", 
         color: "#333", 
         borderRadius: "8px", 
         padding: "16px", 
@@ -66,8 +66,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ cardData }) => {
           {cardData.body}
         </ExpandableText>
       )}
-      <Typography>{cardData.reactions} Reactions</Typography>
-      <Typography>Tags: {cardData.tags.join(', ')}</Typography>
+      <hr/>
+      <Typography><Box component="span" sx={{fontWeight: 700}}>{cardData.reactions}</Box> Reactions</Typography>
+      <hr/>
+      <Typography><Box component="span" sx={{fontWeight: 700}}>Tags:</Box> {cardData.tags.join(', ')}</Typography>
     </Box>
   );
 };
