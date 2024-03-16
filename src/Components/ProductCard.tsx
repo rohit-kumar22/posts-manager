@@ -67,7 +67,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ cardData }) => {
         </ExpandableText>
       )}
       <hr/>
-      <Typography><Box component="span" sx={{fontWeight: 700}}>{cardData.reactions}</Box> Reactions</Typography>
+      <Typography><Box component="span" sx={{fontWeight: 700}}>Reactions:</Box>{cardData.reactions}</Typography>
       <hr/>
       <Typography><Box component="span" sx={{fontWeight: 700}}>Tags:</Box> {cardData.tags.join(', ')}</Typography>
     </Box>

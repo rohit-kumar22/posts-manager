@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Stack, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import ProductCard from "../Components/ProductCard";
 import AddNewProduct from "../Components/AddNewProduct";
 import { fetchProducts } from "../api/api";
@@ -24,18 +24,21 @@ const ProductList = () => {
 
   return (
     <Grid container>
-      <Grid item xs={12}>
-        <Stack direction={"row"}>
-          <Box sx={{ ml: "auto" }}>
-            <AddNewProduct refetch={refetch} />
-          </Box>
-        </Stack>
+      <Grid container sx={{backgroundColor:'grey'}} height='70px'>
+      <Grid item xs={6} pt={2} pl={5}>
+        <Typography sx={{fontSize:'24px', fontWeight:700, color: '#fff'}}>Posts</Typography>
       </Grid>
+      <Grid item xs={6}>
+            <AddNewProduct refetch={refetch} />
+      </Grid>
+      </Grid>
+      <Grid container>
       {!isLoading ? (
         data?.posts.map((item: any) => (
           <Grid item xs={3} key={item.id}>
             <ProductCard cardData={item} />
           </Grid>
+          
         ))
       ) : (
         <Grid xs={12}>
@@ -52,6 +55,7 @@ const ProductList = () => {
           </Box>
         </Grid>
       )}
+      </Grid>
     </Grid>
   );
 };

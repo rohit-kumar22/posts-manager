@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Box, Grid, Divider, TextField, FormControl, InputLabel, OutlinedInput, Snackbar } from "@mui/material";
+import { Button, Box, Grid, Divider, TextField, FormControl, InputLabel, OutlinedInput, Snackbar, Typography } from "@mui/material";
 import Drawer from "@mui/material/Drawer";
 import CloseIcon from "@mui/icons-material/Close";
 import { addProductFormMapping } from "../api/utils/utils";
@@ -102,8 +102,8 @@ if (missingFields.length > 0) {
   };
 
   return (
-    <Box>
-      <Button sx={{ margin: "20px" }} variant="contained" onClick={() => setIsDrawerOpen(true)}>
+    <Box sx={{display:'flex'}}>
+      <Button sx={{ ml: "auto", mr:'20px', mt:'15px' }} variant="contained" onClick={() => setIsDrawerOpen(true)}>
         Add New Product
       </Button>
       <Drawer
@@ -114,7 +114,10 @@ if (missingFields.length > 0) {
         <Box sx={{ width: { xs: "100%", sm: "720px" }, p: 2 }}>
           <Grid container spacing={2}>
             <Grid item xs={12} sx={{ display: "flex", justifyContent: "space-between" }}>
+              <Box sx={{display:'flex'}}>
               <CloseIcon onClick={() => setIsDrawerOpen((prev) => !prev)} sx={{ cursor: "pointer" }} />
+              <Typography sx={{fontSize: '16px', fontWeight: 700, pl:'20px'}}>Add New Post</Typography> 
+              </Box>      
               <Button onClick={submitForm} variant="contained" color="primary">Submit</Button>
             </Grid>
             <Grid item xs={12}><Divider /></Grid>
